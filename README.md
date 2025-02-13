@@ -1,1 +1,0 @@
-# CVPR-NTIRE2025-RainDrop-Competition.github.io
