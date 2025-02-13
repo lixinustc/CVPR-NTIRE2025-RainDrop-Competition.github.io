@@ -186,17 +186,49 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Organizers</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we propose the first universal framework with dynamic prompt strategy and MLP-like module to tackle the challenge CSR tasks. 
+            Benifitting from our dynamic prompt-based offset learning, our UCIP is capable of encoding optimal content-aware contextual information, while 
+            maintaining the task-aware adaptability via prompt components. For more information, please refer to our paper.
+          </p>
+        </div>
+        <div align="center">
+          <img src="./imgs/UCIP.jpg"
+          class="interpolation-image"
+          alt="data"/>
+          <h2 class="subtitle has-text-centered">
+            Framework of the proposed UCIP.
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Competition Background</h2>
         <div class="content has-text-justified">
-          <p>
-            Compressed Image Super-resolution (CSR) aims to simultaneously super-resolve the compressed images and tackle the challenging hybrid distortions caused by compression. However, existing works on CSR usually focus on single compression codec, i.e., JPEG, ignoring the diverse traditional or learning-based codecs in the practical application, e.g., HEVC, VVC, HIFIC, etc. In this work, we propose the first universal CSR framework, dubbed UCIP, with dynamic prompt learning, intending to jointly support the CSR distortions of any compression codecs/modes. Particularly, an efficient dynamic prompt strategy is proposed to mine the content/spatial-aware task-adaptive contextual information for the universal CSR task, using only a small amount of prompts with spatial size 1x1. To simplify contextual information mining, we introduce the novel MLP-like framework backbone for our UCIP by adapting the Active Token Mixer (ATM) to CSR tasks for the first time, where the global information modeling is only taken in horizontal and vertical directions with offset prediction. We also build an all-in-one benchmark dataset for the CSR task by collecting the datasets with the popular 6 diverse traditional and learning-based codecs, including JPEG, HEVC, VVC, HIFIC, etc., resulting in 23 common degradations. Extensive experiments have shown the consistent and excellent performance of our UCIP on universal CSR tasks.
-          </p>
+          <p> Raindrops on camera lenses or windshields significantly reduce image visibility in human life, posing challenges for applications like surveillance and autonomous driving. Effective raindrop removal is crucial to ensuring reliable performance in these systems. However, most deraining datasets overlooked the complex environment in real life. In particular, there are few raindrop-focused datasets, and most existing datasets focus on capturing background scenes while the camera is focused on the background. Meanwhile, these datasets primarily target daytime scenarios, with limited attention to nighttime conditions.</p>
+
+          <p>To promote the development of deraining, we introduce the first large-scale real-world raindrop-clarity dataset, which includes raindrop-focused images and nighttime scenes. Based on this dataset, we have the first NTIRE Challenge on Day and Night Raindrop Removal for Dual-Focused Images, jointly with the NTIRE workshop.</p>
+
+          <p>The goal of this competition is to establish a new and applicable benchmark for the Day and Night Raindrop Removal for Dual-Focused Images. We are looking forward to the collaborative efforts of our participants, aiming to elevate the quality of training images. The final ranking will be made based on PSNR, SSIM, and LPIPS. </p>
+
+          <p>The top-ranked participants will be awarded and invited to follow the CVPR submission guide for workshops to describe their solution and to submit to the associated NTIRE workshop at CVPR 2025.</p>
+
         </div>
       </div>
     </div>
