@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt">
+        content="NTIRE 2025 | The First Challenge on Day and Night Raindrop Removal for Dual-Focused Images">
   <meta name="keywords" content="UCIP">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt</title>
+  <title>NTIRE 2025 | The First Challenge on Day and Night Raindrop Removal for Dual-Focused Images</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -287,66 +287,18 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Competition. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">UCSR Dataset Information</h2>
-        <div class="content has-text-justified">
-          <p>
-            We build an all-in-one benchmark dataset for the compressed image super-resolution (CSR) task by collecting the datasets with the popular 6 
-            diverse traditional and learning-based codecs, including traditional codecs: 
-            JPEG, 
-            HM, 
-            VTM; 
-            and learning-based codecs:
-            \( C_{\text{PSNR}} \),
-            \( C_{\text{SSIM}} \),
-            HIFIC, resulting in 23 common degradations.
-            We list the detailed quality factor (QF), quantization parameter (QP) and compression mode (Mode) in the following (From left to right: poorer quality -> better quality):
-            <ul>
-                <li>JPEG: QF=10,20,30,40</li>
-                <li>HM: QP=47,42,37,32</li>
-                <li>VTM: QP=47,42,37,32</li>
-                <li>\( C_{\text{PSNR}} \): Mode=1,2,3,4</li>
-                <li>\( C_{\text{SSIM}} \): Mode=1,2,3,4</li>
-                <li>HIFIC: Mode='low', 'med', 'high'</li>
-            </ul>
-            We establish our UCSR dataset based on popular high-quality dataset DF2K. 
-            Considering the original image as the ground-truth, we generate the compressed low-resolution image with x4 bicubic downsampling and different compression codecs.
-            For evaluation, we follow the image super-resolution (ISR) problems and adopt five common benchmarks: 
-            Set5, 
-            Set14, 
-            BSD100, 
-            Urban100 and 
-            Manga109. We compress these images with various codecs based on their x4 downsampled version.
-            Our full dataset, including training and testing images, can be downloaded via this <a href="https://drive.google.com/file/d/1LwZiTOofyhJTZb3yILSC9mCX1gsxTdrA/view?usp=sharing">link</a>.
-            Notice that, for the ground-truth of DF2K, please download them via <a href="http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip">DIV2K</a> (800 images) and <a href="https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar">Flickr2K</a> (2650 images). 
-          </p>
-        </div>
-        <!-- <div align="center">
-            <img src="./imgs/dataset.png"
-                 class="interpolation-image"
-                 alt="data"/>
-        </div> -->
-      </div>
-    </div>
-    <!--/ Competition. -->
-  </div>
-</section>
 
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img id="teaser" autoplay muted loop playsinline height="100%">
-            <img src="./imgs/overview.png"
+            <img src=""
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
       </img>
       <h2 class="subtitle has-text-centered">
-        UCSR Dataset
+        Raindrop Dataset
       </h2>
     </div>
   </div>
@@ -357,13 +309,14 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @inproceedings{li2024ucip,
-        title={UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt},
-        author={Li, Xin and Li, Bingchen and Jin, Yeying and Lan, Cuiling and Zhu, Hanxin and Ren, Yulin and Chen, Zhibo},
-        booktitle={European Conference on Computer Vision},
-        year={2024},
-        organization={Springer}
-      }
+    @inproceedings{jin2024raindrop,
+  title={Raindrop Clarity: A Dual-Focused Dataset for Day and Night Raindrop Removal},
+  author={Jin, Yeying and Li, Xin and Wang, Jiadong and Zhang, Yan and Zhang, Malu},
+  booktitle={European Conference on Computer Vision},
+  pages={1--17},
+  year={2024},
+  organization={Springer}
+}
     </code></pre>
   </div>
 </section>
@@ -378,7 +331,7 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="https://arxiv.org/pdf/2402.07220.pdf">
+         href="">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/lixinustc" class="external-link" disabled>
