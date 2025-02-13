@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt">
+  <meta name="keywords" content="UCIP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://renyulin-f.github.io/MoE-DiffIR.github.io/">
+            MoE-DiffIR
+          </a>
+          <a class="navbar-item" href="https://lixinustc.github.io/projects/KVQ/">
+            KVQ
+          </a>
+           <a class="navbar-item" href="https://wxrui182.github.io/CoNo.github.io/">
+            CoNo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=sbiY97gAAAAJ&hl=en">Xin Li</a><sup>*1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=qHeWjNwAAAAJ&hl=en&authuser=1">Bingchen Li</a><sup>*1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Z8PYhA4AAAAJ&hl=en">Yeying Jin</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=XZugqiwAAAAJ&hl=en">Cuiling Lan</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=MbVZAGQAAAAJ&hl=en">Hanxin Zhu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=234Nza8AAAAJ">Yulin Ren</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=1ayDJfsAAAAJ&hl=zh-CN">Zhibo Chen</a><sup>1</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">(* Equal Contributions, ECCV 2024) </span>
+        </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Science and Technology of China,</span>
+            <span class="author-block"><sup>2</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>3</sup>Microsoft Research Asia</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/lixinustc/UCIP"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1LwZiTOofyhJTZb3yILSC9mCX1gsxTdrA/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Compressed Image Super-resolution (CSR) aims to simultaneously super-resolve the compressed images and tackle the challenging hybrid distortions caused by compression. However, existing works on CSR usually focus on single compression codec, i.e., JPEG, ignoring the diverse traditional or learning-based codecs in the practical application, e.g., HEVC, VVC, HIFIC, etc. In this work, we propose the first universal CSR framework, dubbed UCIP, with dynamic prompt learning, intending to jointly support the CSR distortions of any compression codecs/modes. Particularly, an efficient dynamic prompt strategy is proposed to mine the content/spatial-aware task-adaptive contextual information for the universal CSR task, using only a small amount of prompts with spatial size 1x1. To simplify contextual information mining, we introduce the novel MLP-like framework backbone for our UCIP by adapting the Active Token Mixer (ATM) to CSR tasks for the first time, where the global information modeling is only taken in horizontal and vertical directions with offset prediction. We also build an all-in-one benchmark dataset for the CSR task by collecting the datasets with the popular 6 diverse traditional and learning-based codecs, including JPEG, HEVC, VVC, HIFIC, etc., resulting in 23 common degradations. Extensive experiments have shown the consistent and excellent performance of our UCIP on universal CSR tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we propose the first universal framework with dynamic prompt strategy and MLP-like module to tackle the challenge CSR tasks. 
+            Benifitting from our dynamic prompt-based offset learning, our UCIP is capable of encoding optimal content-aware contextual information, while 
+            maintaining the task-aware adaptability via prompt components. For more information, please refer to our paper.
+          </p>
+        </div>
+        <div align="center">
+          <img src="./imgs/UCIP.jpg"
+          class="interpolation-image"
+          alt="data"/>
+          <h2 class="subtitle has-text-centered">
+            Framework of the proposed UCIP.
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Competition. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">UCSR Dataset Information</h2>
+        <div class="content has-text-justified">
+          <p>
+            We build an all-in-one benchmark dataset for the compressed image super-resolution (CSR) task by collecting the datasets with the popular 6 
+            diverse traditional and learning-based codecs, including traditional codecs: 
+            JPEG, 
+            HM, 
+            VTM; 
+            and learning-based codecs:
+            \( C_{\text{PSNR}} \),
+            \( C_{\text{SSIM}} \),
+            HIFIC, resulting in 23 common degradations.
+            We list the detailed quality factor (QF), quantization parameter (QP) and compression mode (Mode) in the following (From left to right: poorer quality -> better quality):
+            <ul>
+                <li>JPEG: QF=10,20,30,40</li>
+                <li>HM: QP=47,42,37,32</li>
+                <li>VTM: QP=47,42,37,32</li>
+                <li>\( C_{\text{PSNR}} \): Mode=1,2,3,4</li>
+                <li>\( C_{\text{SSIM}} \): Mode=1,2,3,4</li>
+                <li>HIFIC: Mode='low', 'med', 'high'</li>
+            </ul>
+            We establish our UCSR dataset based on popular high-quality dataset DF2K. 
+            Considering the original image as the ground-truth, we generate the compressed low-resolution image with x4 bicubic downsampling and different compression codecs.
+            For evaluation, we follow the image super-resolution (ISR) problems and adopt five common benchmarks: 
+            Set5, 
+            Set14, 
+            BSD100, 
+            Urban100 and 
+            Manga109. We compress these images with various codecs based on their x4 downsampled version.
+            Our full dataset, including training and testing images, can be downloaded via this <a href="https://drive.google.com/file/d/1LwZiTOofyhJTZb3yILSC9mCX1gsxTdrA/view?usp=sharing">link</a>.
+            Notice that, for the ground-truth of DF2K, please download them via <a href="http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip">DIV2K</a> (800 images) and <a href="https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar">Flickr2K</a> (2650 images). 
+          </p>
+        </div>
+        <!-- <div align="center">
+            <img src="./imgs/dataset.png"
+                 class="interpolation-image"
+                 alt="data"/>
+        </div> -->
+      </div>
+    </div>
+    <!--/ Competition. -->
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" autoplay muted loop playsinline height="100%">
+            <img src="./imgs/overview.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </img>
+      <h2 class="subtitle has-text-centered">
+        UCSR Dataset
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @inproceedings{li2024ucip,
+        title={UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt},
+        author={Li, Xin and Li, Bingchen and Jin, Yeying and Lan, Cuiling and Zhu, Hanxin and Ren, Yulin and Chen, Zhibo},
+        booktitle={European Conference on Computer Vision},
+        year={2024},
+        organization={Springer}
+      }
+    </code></pre>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2402.07220.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/lixinustc" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website adapted from the following <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
