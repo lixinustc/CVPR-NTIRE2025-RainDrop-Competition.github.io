@@ -194,7 +194,113 @@
         <h2 class="title is-3">Organizers</h2>
         <div class="content has-text-justified">
           <p>
-           
+  <style>
+    /* 外层容器，使用 Flex 布局，并自动换行 */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* 居中对齐 */
+      gap: 20px;  /* 每个项目之间的间距 */
+      max-width: 800px; /* 根据需要调整总宽度 */
+      margin: 0 auto;
+    }
+    /* 每个人的外层容器 */
+    .person {
+      /* 保证每行6个 */
+      flex: 0 0 calc(100% / 6 - 20px);
+      display: flex;
+      justify-content: center;
+    }
+    /* 圆形背景容器 */
+    .circle {
+      width: 100px;       /* 可调整圆形直径 */
+      height: 100px;
+      background-color: #e0e0e0; /* 圆形背景色 */
+      border-radius: 50%; /* 使容器变成圆形 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* 图片样式 */
+    .circle img {
+      width: 90%;       /* 图片宽度占圆形的 90% */
+      height: 90%;      /* 图片高度占圆形的 90% */
+      object-fit: cover; /* 保持图片比例，超出部分自动裁剪 */
+      border-radius: 50%; /* 使图片也呈现圆形 */
+    }
+    /* 响应式调整（例如屏幕较窄时每行显示3个） */
+    @media (max-width: 768px) {
+      .person {
+        flex: 0 0 calc(100% / 3 - 20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 下面示例了12个照片，你需要将 src 替换为实际图片路径 -->
+    <div class="person">
+      <div class="circle">
+        <img src="person1.jpg" alt="人1">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person2.jpg" alt="人2">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person3.jpg" alt="人3">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person4.jpg" alt="人4">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person5.jpg" alt="人5">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person6.jpg" alt="人6">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person7.jpg" alt="人7">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person8.jpg" alt="人8">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person9.jpg" alt="人9">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person10.jpg" alt="人10">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person11.jpg" alt="人11">
+      </div>
+    </div>
+    <div class="person">
+      <div class="circle">
+        <img src="person12.jpg" alt="人12">
+      </div>
+    </div>
+  </div>
+</body>
           </p>
         </div>
         <div align="center">
@@ -309,7 +415,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-    @inproceedings{jin2024raindrop,
+  @inproceedings{jin2024raindrop,
   title={Raindrop Clarity: A Dual-Focused Dataset for Day and Night Raindrop Removal},
   author={Jin, Yeying and Li, Xin and Wang, Jiadong and Zhang, Yan and Zhang, Malu},
   booktitle={European Conference on Computer Vision},
